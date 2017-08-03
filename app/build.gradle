@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    aaptOptions{
+        cruncherEnabled = false
+    }
+
+    defaultConfig {
+        applicationId "ai.loginpage3"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.flaviofaria:kenburnsview:1.0.7'
+    compile 'com.daasuu:EasingInterpolator:1.0.0'
+    compile 'devs.mulham.horizontalcalendar:horizontalcalendar:1.1.7'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:animated-vector-drawable:25.3.1'
+    compile 'com.android.support:percent:25.3.1'
+
+}
